@@ -1,0 +1,22 @@
+from django.urls import path, include
+
+from Blog_APP.views import (AboutView, PostListView, PostDetailView,
+                            PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
+                            )
+
+# from .views import home, about
+
+urlpatterns = [
+
+    # path('', home, name='blog-home'),
+    # path('about/', about, name='blog-about')
+
+    path('', PostListView.as_view(), name='blog-home'),
+    path('user/<str:username>', UserPostListView.as_view(), name='user-post'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+    path('post/new/', PostCreateView.as_view(), name='post-create'),
+    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
+    path('about/', AboutView.as_view(), name='blog-about'),
+
+]
