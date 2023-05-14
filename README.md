@@ -1,8 +1,8 @@
 This is Django Blog App That are user to Perform CRUD operations 
 
 Technology Used:
-Backend : Python,Django
-Frontend: Django Forms, Bootstarp5 
+Backend : Python,Django,
+Frontend: Django Forms, Bootstarp5 ,
 Database:  SqLite
 Version control: Git
 
